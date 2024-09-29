@@ -17,7 +17,7 @@ export function Home({setScreen, setMusicaData}) {
       }
     }
     fetchMusicas()
-  }, [])
+  }, []) // eslint-disable-line
 
   return (
     <div className="flex flex-col gap-4 size-full bg-secondary-300 py-10">
