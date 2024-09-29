@@ -20,7 +20,7 @@ export function Home({setScreen, setMusicaData}) {
   }, []) // eslint-disable-line
 
   return (
-    <div className="flex flex-col gap-4 size-full bg-secondary-300 py-10">
+    <div className="flex flex-col gap-4 size-full min-h-screen bg-secondary-300 py-10">
       <h1 className="text-secondary-100 text-center text-6xl font-medium">Cifras de Chiquinho</h1>
       <main className="flex flex-col gap-7 items-center py-10 flex-1">
         {musicas.length 
