@@ -37,9 +37,11 @@ export function Musica({data, setScreen, setMusicaData}) {
 
     return (
         <div className="flex flex-col items-center gap-4 size-full min-h-screen bg-secondary-300 py-10 *:text-secondary-100">
-            <IoReturnUpBack className={'absolute right-20 max-sm:top-2 max-sm:right-4 text-2xl hover:text-primary-100 ease-in-out duration-500 active:text-secondary-100 active:transition-transform cursor-pointer'} onClick={handleReturn}/>
+            <IoReturnUpBack className={'absolute left-20 max-sm:top-2 max-sm:right-4 text-2xl hover:text-primary-100 ease-in-out duration-500 active:text-secondary-100 active:transition-transform cursor-pointer'} onClick={handleReturn}/>
             <h1 className="text-4xl font-medium">{data.titulo}</h1>
-            <span>Tom: <span className="text-primary-100">{data.tom}</span></span>
+            <span>Tom: &nbsp;
+                <button className="text-primary-100 hover:text-orange-700 ease-in-out duration-500 active:text-secondary-100 active:transition-transform">{data.tom}</button>
+            </span>
             <pre className="text-lg max-sm:text-sm">{cifraFiltrada}</pre>
         </div>
     )

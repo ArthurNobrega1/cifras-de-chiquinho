@@ -9,8 +9,15 @@ export function Home({setScreen, setMusicaData}) {
   useEffect(() => {
     const fetchMusicas = async() => {
       try {
+        const cachedMusicas = localStorage.getItem("musicas")
+        if (cachedMusicas) {
+          setMusicas(JSON.parse(cachedMusicas))
+        }
+
         const response = await fetch(api)
         const data = await response.json()
+        
+        localStorage.setItem("musicas", JSON.stringify(data))
         setMusicas(data)
       } catch (error) {
         console.error('Erro ', error)
